@@ -21,7 +21,7 @@ import com.example.demo.config.DefaultProfileUtil;
 
 /**
  * Spring boot application
- *
+ * Boot app
  */
 @SpringBootApplication
 @EnableConfigurationProperties({ApplicationProperties.class})
