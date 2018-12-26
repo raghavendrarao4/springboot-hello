@@ -47,6 +47,7 @@ public class SpringBootJpaApp {
 	public static void main(String[] args) {
 		
 		SpringApplication app = new SpringApplication(SpringBootJpaApp.class);
+		app.setAllowBeanDefinitionOverriding(true);
         DefaultProfileUtil.addDefaultProfile(app);
         Environment environment = app.run(args).getEnvironment();
 
