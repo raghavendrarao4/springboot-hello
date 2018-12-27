@@ -1,0 +1,26 @@
+# ===================================================================
+# Spring Boot configuration for the "dev" profile.
+#
+# This configuration overrides the application.yml file.
+# Standard Spring Boot properties.
+
+logging:
+    level:
+        ROOT: DEBUG
+        com.example.demo: DEBUG
+spring:
+    profiles:
+        active: dev
+        include:
+            - swagger
+    devtools:
+        restart:
+            enabled: true
+    jackson:
+        serialization:
+            indent-output: true
+server:
+    port: 9080
+
+# Application specific properties
+# application:
