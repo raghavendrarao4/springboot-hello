@@ -1,0 +1,40 @@
+# Spring Boot configuration.
+#
+# This configuration will be overridden by the Spring profile you use,
+# for example application-dev.yml if you use the "dev" profile.
+# Standard Spring Boot properties.
+
+spring:
+    application:
+        name: springbootjpaapp
+    h2:
+        console:
+            enabled:true
+    jpa:
+        show:
+            sql:true
+        hibernate:
+            ddl-auto:update
+        properties:
+            hibernate:
+                dialect:org.hibernate.dialect.H2Dialect
+    messages:
+        basename: i18n/messages
+    mvc:
+        favicon:
+            enabled: false
+    thymeleaf:
+        mode: HTML
+    datasource:
+        url:jdbc:h2:mem:employeedb
+        driverClassName:org.h2.Driver
+        username:sa
+        password:sa
+
+server:
+    servlet:
+        session:
+            cookie:
+                http-only: true
+# Application specific properties
+# application:
